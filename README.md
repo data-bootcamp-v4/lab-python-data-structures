@@ -25,7 +25,7 @@
   </summary>
 Before this starting this lab, you should have learnt about:
 
-- Basic Pyhon syntax
+- Basic Python syntax
 - Variables
 - Data types, operators and structures
 
