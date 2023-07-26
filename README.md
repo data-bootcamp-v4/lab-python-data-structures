@@ -55,9 +55,10 @@ Through a series of lab exercises, you will have the opportunity to apply the co
 - Fork this repo
 - Clone it to your machine
 
+
 ## Getting Started
 
-Complete the challenges in the `src` directory. Follow the instructions and add your code and explanations as necessary.
+Complete the challenges in the notebook. Follow the instructions and add your code and explanations as necessary.
 
 ## Submission
 
@@ -69,8 +70,7 @@ git commit -m "Solved lab"
 git push origin master
 ```
 
-- Create a Pull Request so that your TAs can check your work.
-
+- Paste the link of your lab in Student Portal.
 
 ## FAQs
 <details>
