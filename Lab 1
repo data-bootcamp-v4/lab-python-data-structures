@@ -1,0 +1,8 @@
+products = ["t-shirt", "mug", "hat", "book", "keychain"]
+inventory= {}
+inventory['t-shirt'] = int(input('Enter the number of T-shirt: '))
+inventory['mug'] = int(input('Enter the number of Mugs: '))
+inventory['hat'] = int(input('Enter the number of Hats: '))
+inventory['book'] = int(input('Enter the number of Books: '))
+inventory['keychain'] = int(input('Enter the number of Keychain: '))
+customer_orders = []
