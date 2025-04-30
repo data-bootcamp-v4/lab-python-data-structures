@@ -1,0 +1,27 @@
+products = ["t-shirt", "mug", "hat", "book", "keychain"]
+inventory = {} 
+#list of products
+#defining a dictionary to store the inventory of each product
+inventory["t-shirt"] = int(input("Enter the quantity of each t-shirt: "))
+inventory["mug"] = int(input("Enter the quantity of each mug: "))
+inventory["hat"] = int(input("Enter the quantity of each hat: "))
+inventory["keychain"] = int(input("Enter the quantity of each keychain: "))
+ #input the name of three products that a customer wants to order and Add each product name to the customer_orders set.
+
+customer_orders = set()
+#input the name of three products that a customer wants to order and Add each product name to the customer_orders set.
+customer_orders_1 = {input("Enter the name of the three product: ")}
+customer_orders_2 = {input("Enter second product: ")}
+customer_orders_3 = {input("add the third product: ")}
+customer_orders = customer_orders_1.union(customer_orders_2, customer_orders_3)
+#   - Check if the product is available in the inventory and if so, reduce the inventory count by 1.
+print("The customer ordered: ", customer_orders)
+# Total Products Ordered: The total number of products in the `customer_orders` set.
+total_products_ordered = len(customer_orders)
+print("Total Products Ordered: ", total_products_ordered)
+#   - Percentage of Products Ordered: The percentage of products ordered compared to the total available products.
+percentage_ordered = (total_products_ordered / len(products)) * 100
+print("Percentage of Products Ordered: ", percentage_ordered, "%")
+
+#Update the inventory by subtracting 1 from the quantity of each product
+
