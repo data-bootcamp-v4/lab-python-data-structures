@@ -1,0 +1,12 @@
+Hello, this is my first git command!
+
+
+
+
+
+
+
+
+
+
+:wq
