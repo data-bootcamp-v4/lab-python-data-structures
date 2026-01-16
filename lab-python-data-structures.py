@@ -1,0 +1,177 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "tags": []
+   },
+   "source": [
+    "# Lab | Data Structures "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exercise: Managing Customer Orders\n",
+    "\n",
+    "As part of a business venture, you are starting an online store that sells various products. To ensure smooth operations, you need to develop a program that manages customer orders and inventory.\n",
+    "\n",
+    "Follow the steps below to complete the exercise:\n",
+    "\n",
+    "1. Define a list called `products` that contains the following items: \"t-shirt\", \"mug\", \"hat\", \"book\", \"keychain\".\n",
+    "\n",
+    "2. Create an empty dictionary called `inventory`.\n",
+    "\n",
+    "3. Ask the user to input the quantity of each product available in the inventory. Use the product names from the `products` list as keys in the `inventory` dictionary and assign the respective quantities as values.\n",
+    "\n",
+    "4. Create an empty set called `customer_orders`.\n",
+    "\n",
+    "5. Ask the user to input the name of three products that a customer wants to order (from those in the products list, meaning three products out of \"t-shirt\", \"mug\", \"hat\", \"book\" or \"keychain\". Add each product name to the `customer_orders` set.\n",
+    "\n",
+    "6. Print the products in the `customer_orders` set.\n",
+    "\n",
+    "7. Calculate the following order statistics:\n",
+    "   - Total Products Ordered: The total number of products in the `customer_orders` set.\n",
+    "   - Percentage of Products Ordered: The percentage of products ordered compared to the total available products.\n",
+    "   \n",
+    "   Store these statistics in a tuple called `order_status`.\n",
+    "\n",
+    "8. Print the order statistics using the following format:\n",
+    "   ```\n",
+    "   Order Statistics:\n",
+    "   Total Products Ordered: <total_products_ordered>\n",
+    "   Percentage of Products Ordered: <percentage_ordered>% \n",
+    "   ```\n",
+    "\n",
+    "9. Update the inventory by subtracting 1 from the quantity of each product. Modify the `inventory` dictionary accordingly.\n",
+    "\n",
+    "10. Print the updated inventory, displaying the quantity of each product on separate lines.\n",
+    "\n",
+    "Solve the exercise by implementing the steps using the Python concepts of lists, dictionaries, sets, and basic input/output operations. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Select the quantity of t-shirts to add to inventory:  25\n",
+      "Select the quantity of mug to add to inventory:  15\n",
+      "Select the quantity of hat to add to inventory:  154\n",
+      "Select the quantity of book to add to inventory:  45\n",
+      "Select the quantity of keychain to add to inventory:  63\n",
+      "Enter the name of a product the customer wants to order:  hat\n",
+      "Enter the name of a product the customer wants to order:  book\n",
+      "Enter the name of a product the customer wants to order:  mug\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Products in customer orders: {'book', 'mug', 'hat'}\n",
+      "Order Statistics\n",
+      "total products ordered: 3\n",
+      "percentage of products ordered: 60.0\n",
+      "Updated inventory:\n",
+      "T-shirt: 25\n",
+      "Mug: 14\n",
+      "Hat: 153\n",
+      "Book: 44\n",
+      "Keychain: 63\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Exercise: Managing customers orders\n",
+    "\n",
+    "\n",
+    "products = [\"t-shirt\", \"mug\", \"hat\", \"book\", \"keychain\"]\n",
+    "\n",
+    "inventory = {}\n",
+    "\n",
+    "quantity = int(input(\"Select the quantity of t-shirts to add to inventory: \"))\n",
+    "inventory[\"t-shirt\"] = quantity\n",
+    "\n",
+    "quantity = int(input(\"Select the quantity of mug to add to inventory: \"))\n",
+    "inventory[\"mug\"] = quantity\n",
+    "\n",
+    "quantity = int(input(\"Select the quantity of hat to add to inventory: \"))\n",
+    "inventory[\"hat\"] = quantity\n",
+    "\n",
+    "quantity = int(input(\"Select the quantity of book to add to inventory: \"))\n",
+    "inventory[\"book\"] = quantity\n",
+    "\n",
+    "quantity = int(input(\"Select the quantity of keychain to add to inventory: \"))\n",
+    "inventory[\"keychain\"] = quantity\n",
+    "\n",
+    "\n",
+    "customer_orders = set()\n",
+    "\n",
+    "product_name = input(\"Enter the name of a product the customer wants to order: \")\n",
+    "customer_orders.add(product_name)\n",
+    "\n",
+    "product_name = input(\"Enter the name of a product the customer wants to order: \")\n",
+    "customer_orders.add(product_name)\n",
+    "\n",
+    "product_name = input(\"Enter the name of a product the customer wants to order: \")\n",
+    "customer_orders.add(product_name)\n",
+    "\n",
+    "print(\"Products in customer orders:\", customer_orders)\n",
+    "\n",
+    "total_products_ordered = len(customer_orders)\n",
+    "percentage_ordered = (total_products_ordered / len(products)) * 100\n",
+    "\n",
+    "print(\"Order Statistics\")\n",
+    "print(\"total products ordered:\", total_products_ordered)\n",
+    "print(\"percentage of products ordered:\", percentage_ordered)\n",
+    "\n",
+    "for product_name in customer_orders:\n",
+    "    if product_name in inventory:\n",
+    "        inventory[product_name] -= 1\n",
+    "    else:\n",
+    "        print(f\"Product '{product_name}' not found in inventory\")\n",
+    "\n",
+    "print(\"Updated inventory:\")\n",
+    "print(\"T-shirt:\", inventory[\"t-shirt\"])\n",
+    "print(\"Mug:\", inventory[\"mug\"])\n",
+    "print(\"Hat:\", inventory[\"hat\"])\n",
+    "print(\"Book:\", inventory[\"book\"])\n",
+    "print(\"Keychain:\", inventory[\"keychain\"])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
