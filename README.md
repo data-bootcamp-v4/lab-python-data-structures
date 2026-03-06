@@ -36,7 +36,7 @@ Before this starting this lab, you should have learnt about:
 
 ## Introduction
 
-Welcome to your first data analytics bootcamp lab! In this lab, you will have the opportunity to dive into one of the fundamental building blocks of Python programming: data structures.
+Welcome to your first data analytics bootcamp lab!!! In this lab, you will have the opportunity to dive into one of the fundamental building blocks of Python programming: data structures.
 
 As you may already know, data structures are collections of values that can be used to organize and manipulate data more efficiently, such as lists, dictionaries, sets, and tuples.
 
